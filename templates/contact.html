@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us | SealthLink{% endblock %}
+
+{% block content %}
+<style>
+    .contact-hero {
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .contact-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('{{ url_for('static', filename='images/pattern.png') }}') repeat;
+        opacity: 0.1;
+    }
+    .contact-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+    }
+    .contact-hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+        background: #f9f9f9;
+    }
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    .contact-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .contact-card:hover {
+        transform: translateY(-5px);
+    }
+    .contact-icon {
+        font-size: 2rem;
+        color: #1a2a6c;
+        margin-bottom: 1rem;
+    }
+    .contact-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .contact-link {
+        color: #b21f1f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+
+    .map-section {
+        padding: 60px 0;
+    }
+    .map-container {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .team-contact {
+        padding: 5rem 0;
+        background-color: #f9fafc;
+    }
+    .team-contact h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #1a2a4f;
+    }
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .team-member {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        text-align: center;
+    }
+    .member-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 1.5rem;
+        border: 3px solid #3a5683;
+    }
+    .member-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .team-member h3 {
+        color: #1a2a4f;
+        margin-bottom: 0.5rem;
+    }
+    .team-member .position {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+    }
+    .contact-info {
+        color: #3a5683;
+        line-height: 1.8;
+    }
+    .contact-info i {
+        margin-right: 0.5rem;
+        width: 20px;
+        text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        .contact-methods {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact-hero {
+            padding: 3rem 0;
+        }
+        .contact-hero h1 {
+            font-size: 2.2rem;
+        }
+        .contact-section,
+        .map-section,
+        .team-contact {
+            padding: 3rem 0;
+        }
+    }
+</style>
+
+<section class="contact-hero">
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p>We're here to help with any questions about our security products or services.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Methods -->
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>For general inquiries and support</p>
+                    <a href="mailto:contact@sealthlink.com" class="contact-link">contact@sealthlink.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Available 9AM-5PM IST, Monday-Friday</p>
+                    <a href="tel:+919074723677" class="contact-link">+91 9074723677</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Our secure headquarters</p>
+                    <address class="contact-link">
+                        Kochi, Kerala<br>
+                        India, 686665
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-section">
+    <div class="container">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.947139614735!2d76.29014931480164!3d9.981600992884614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTg1NC4xIk4gNzYLMDE3MzYuNSJF!5e0!3m2!1sen!2sin!4v1625234567890!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<section class="team-contact">
+    <div class="container">
+        <h2>Contact Our Leadership</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="{{ url_for('static', filename='images/k.png') }}" alt="Alex J Mathew">
+                </div>
+                <h3>Alex J Mathew</h3>
+                <p class="position">Co-Founder & CEO</p>
+                <p class="contact-info">
+                    <i class="fas fa-phone"></i> +91 9074723677<br>
+                    <i class="fas fa-envelope"></i> alex@sealthlink.com
+                </p>
+            </div>
+            
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="{{ url_for('static', filename='images/sarah.jpg') }}" alt="Sangeeth Karunak">
+                </div>
+                <h3>Sangeeth Karunak</h3>
+                <p class="position">Co-Founder</p>
+                <p class="contact-info">
+                    <i class="fas fa-phone"></i> +91 9074723678<br>
+                    <i class="fas fa-envelope"></i> sangeeth@sealthlink.com
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Our Products{% endblock %}
+
+{% block content %}
+<section class="products-hero">
+    <h2>Security Solutions</h2>
+    <p>Choose the right protection for your needs</p>
+</section>
+
+<section class="products-section">
+    <div class="product-card featured">
+        <div class="product-badge">Most Popular</div>
+        <div class="product-image">
+            <img src="{{ url_for('static', filename='images/G.jpg') }}" alt="Secure Messenger">
+        </div>
+        <div class="product-content">
+            <h3>SealthLink Secure Messenger</h3>
+            <p class="product-description">An end-to-end encrypted messaging app that obscures metadata and resists AI-driven content analysis.</p>
+            
+            <div class="product-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Zero-knowledge encryption</li>
+                    <li>Metadata obfuscation</li>
+                    <li>AI-resistant content scrambling</li>
+                    <li>Real-time fraud detection</li>
+                    <li>Cross-platform support</li>
+                </ul>
+            </div>
+            
+            <div class="product-actions">
+                <a href="#" class="cta-button">Download Now</a>
+                <a href="#" class="secondary-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="{{ url_for('static', filename='images/G.jpg') }}" alt="SecureNote">
+        </div>
+        <div class="product-content">
+            <h3>SealthLink SecureNote</h3>
+            <p class="product-description">A lightweight app for encrypted, single-use notes that self-destruct after being read, ideal for sensitive reminders.</p>
+            
+            <div class="product-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>One-time view notes</li>
+                    <li>Automatic destruction after reading</li>
+                    <li>No metadata retention</li>
+                    <li>Password protection options</li>
+                    <li>Cross-device synchronization</li>
+                </ul>
+            </div>
+            
+            <div class="product-actions">
+                <a href="#" class="cta-button">Download Now</a>
+                <a href="#" class="secondary-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-comparison">
+    <h2>Which Product is Right For You?</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Secure Messenger</th>
+                <th>SecureNote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Encryption</td>
+                <td>✅ End-to-end</td>
+                <td>✅ End-to-end</td>
+            </tr>
+            <tr>
+                <td>Metadata Protection</td>
+                <td>✅ Full obfuscation</td>
+                <td>✅ No metadata stored</td>
+            </tr>
+            <tr>
+                <td>AI Resistance</td>
+                <td>✅ Advanced</td>
+                <td>✅ Basic</td>
+            </tr>
+            <tr>
+                <td>Self-Destruct</td>
+                <td>Optional</td>
+                <td>✅ Always</td>
+            </tr>
+            <tr>
+                <td>Ideal For</td>
+                <td>Ongoing secure conversations</td>
+                <td>Sensitive one-time information</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+{% endblock %}

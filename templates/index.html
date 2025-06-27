@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Secure Communications{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Secure Messenger for the AI Era</h2>
+            <p class="tagline">Stay Hidden, Stay Secure with military-grade encryption</p>
+            <div class="hero-buttons">
+                <a href="#features" class="cta-button">Explore Features</a>
+                <a href="{{ url_for('products') }}" class="cta-button secondary">View Products</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/b.png') }}" alt="Secure messaging illustration">
+        </div>
+    </div>
+    <div class="scrolling-indicator">
+        <span>Scroll to discover</span>
+        <div class="arrow-down"></div>
+    </div>
+</section>
+
+<section id="features" class="features-section">
+    <div class="section-header">
+        <h2>Why Choose SealthLink</h2>
+        <p>Our security solutions are designed for the AI surveillance age</p>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Military-Grade Encryption</h3>
+            <p>End-to-end encryption that even quantum computers can't crack</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3>AI Surveillance Resistance</h3>
+            <p>Patented technology that scrambles metadata patterns</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Self-Destructing Messages</h3>
+            <p>Auto-delete sensitive communications after reading</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="testimonial-card">
+        <div class="quote-mark"></div>
+        <p class="testimonial-text">SealthLink has transformed how we handle sensitive communications. The peace of mind is priceless.</p>
+        <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+                <p class="author-name">Alex J Mathew</p>
+                <p class="author-title">Co-Founder & Developer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Ready to Take Control of Your Privacy?</h2>
+    <a href="{{ url_for('products') }}" class="cta-button large">Explore Our Products</a>
+</section>
+{% endblock %}

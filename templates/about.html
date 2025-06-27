@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}About SealthLink{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <h2>About SealthLink</h2>
+    
+    <div class="vision-mission">
+        <div class="vision">
+            <h3>Our Vision</h3>
+            <p>To become the leading provider of privacy-focused solutions that safeguard personal and professional data against AI surveillance, fraud, and cyber threats.</p>
+        </div>
+        
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>To empower individuals and organizations to protect their privacy, secure their communications, and detect fraudulent activities in an AI-driven world.</p>
+        </div>
+    </div>
+    
+    <div class="technology">
+        <h3>Our Technology</h3>
+        <p>SealthLink uses cutting-edge cryptographic techniques combined with AI-resistant protocols to ensure your communications remain private and secure, even against sophisticated AI-powered surveillance systems.</p>
+    </div>
+
+    <div class="team-section">
+        <h3>Our Team</h3>
+        <p>Meet the brilliant minds behind SealthLink's innovative security solutions.</p>
+        
+        <div class="team-grid">
+            <!-- Leadership Team -->
+            <div class="department">
+                <h4>Leadership</h4>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="{{ url_for('static', filename='images/k.png') }}" alt="Secure Messenger">
+                        </div>
+                        <h5>Alex J Mathew</h5>
+                        <p class="position">Co-Founder & Developer</p>
+                        <p class="bio">AI Researcher</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h5>Shamil </h5>
+                        <p class="position">R&D Researcher & Co-Founder</p>
+                        <p class="bio">Cryptography expert specializing in AI-resistant protocols.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering -->
+            <div class="department">
+                <h4>Cybersecurity</h4>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h5>SANGEETH KARUNAK</h5>
+                        <p class="position">Co-Founder & R&D Researcher </p>
+                        <p class="bio">Develops our core encryption frameworks and security protocols.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- AI Research -->
+            <div class="department">
+                <h4>AI Research</h4>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h5>Alfy Mathew Phlip</h5>
+                        <p class="position">AI Research</p>
+                        <p class="bio">Develops our anti-AI surveillance techniques.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h5>Swajna Mary Nelson</h5>
+                        <p class="position">Machine Learning Engineer</p>
+                        <p class="bio">Builds our fraud detection algorithms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product -->
+            <div class="department">
+                <h4>Electronics and Communication</h4>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h5>Soan Jatheesh M</h5>
+                        <p class="position">Head of Communication & Co-Founder</p>
+                        <p class="bio">Leads our cross-platform secure messenger development.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
